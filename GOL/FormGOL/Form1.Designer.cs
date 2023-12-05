@@ -31,7 +31,6 @@
             StartButton = new Button();
             StopButton = new Button();
             ResetButton = new Button();
-            ScoreButton = new Button();
             SettingsButton = new Button();
             SpeedTrackBar = new TrackBar();
             groupBox1 = new GroupBox();
@@ -69,19 +68,9 @@
             ResetButton.UseVisualStyleBackColor = true;
             ResetButton.Click += ResetButton_Click;
             // 
-            // ScoreButton
-            // 
-            ScoreButton.Location = new Point(12, 117);
-            ScoreButton.Name = "ScoreButton";
-            ScoreButton.Size = new Size(94, 29);
-            ScoreButton.TabIndex = 3;
-            ScoreButton.Text = "Score";
-            ScoreButton.UseVisualStyleBackColor = true;
-            ScoreButton.Click += ScoreButton_Click;
-            // 
             // SettingsButton
             // 
-            SettingsButton.Location = new Point(12, 152);
+            SettingsButton.Location = new Point(12, 117);
             SettingsButton.Name = "SettingsButton";
             SettingsButton.Size = new Size(94, 29);
             SettingsButton.TabIndex = 4;
@@ -93,14 +82,14 @@
             // 
             SpeedTrackBar.Location = new Point(6, 17);
             SpeedTrackBar.Name = "SpeedTrackBar";
-            SpeedTrackBar.Size = new Size(241, 56);
+            SpeedTrackBar.Size = new Size(244, 56);
             SpeedTrackBar.TabIndex = 5;
             SpeedTrackBar.Scroll += SpeedTrackBar_Scroll;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(SpeedTrackBar);
-            groupBox1.Location = new Point(12, 187);
+            groupBox1.Location = new Point(12, 152);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(256, 88);
             groupBox1.TabIndex = 6;
@@ -111,15 +100,14 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1318, 529);
             Controls.Add(groupBox1);
             Controls.Add(SettingsButton);
-            Controls.Add(ScoreButton);
             Controls.Add(ResetButton);
             Controls.Add(StopButton);
             Controls.Add(StartButton);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Game Of Life";
             ((System.ComponentModel.ISupportInitialize)SpeedTrackBar).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -131,7 +119,6 @@
         private Button StartButton;
         private Button StopButton;
         private Button ResetButton;
-        private Button ScoreButton;
         private Button SettingsButton;
         private TrackBar SpeedTrackBar;
         private GroupBox groupBox1;
