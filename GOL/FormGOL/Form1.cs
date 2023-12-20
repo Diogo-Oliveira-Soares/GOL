@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace FormGOL
 {
     public partial class Form1 : Form
@@ -7,6 +9,7 @@ namespace FormGOL
         public Form1()
         {
             InitializeComponent();
+            for (int i = 0; i < 26; i++) { GameGrid.Rows.Add(""); }
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -45,11 +48,6 @@ namespace FormGOL
             this.InitializeComponent();
         }
 
-        private void ScoreButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SettingsButton_Click(object sender, EventArgs e)
         {
 
@@ -58,6 +56,18 @@ namespace FormGOL
         private void SpeedTrackBar_Scroll(object sender, EventArgs e)
         {
             speed = SpeedTrackBar.Value;
+        }
+
+        private void GameGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (GameGrid.DefaultCellStyle.SelectionBackColor == Color.Yellow)
+            {
+                GameGrid.DefaultCellStyle.SelectionBackColor = Color.White;
+            }
+            else
+            {
+                GameGrid.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+            }
         }
     }
 }
